@@ -7,7 +7,7 @@ namespace Cse210Starter
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Tic Tac Toe Game");
 
             // Write your code here
 
@@ -43,9 +43,6 @@ namespace Cse210Starter
                         int player2 = int.Parse(player2Input);
                         squares[player2 - 1] = 'o';}
                 }
-                
-                Console.WriteLine(squares);
-
             }
         }
     }   
