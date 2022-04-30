@@ -1,9 +1,4 @@
-﻿
-using System;
-// Program: CSE 210 Tic Tac Toe Example
-// Author: Brother Burton
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace cse210_student_csharp_tictactoe_complete
@@ -72,6 +67,7 @@ namespace cse210_student_csharp_tictactoe_complete
         }
         static bool IsTie(List<string> board)
         {
+            
             // If there is a digit, there are still moves to be made.
             bool foundDigit = false;
             foreach (string value in board)
@@ -105,5 +101,7 @@ namespace cse210_student_csharp_tictactoe_complete
             int index = choice - 1;
             board[index] = currentPlayer;
         }
+
+
     }
 }
