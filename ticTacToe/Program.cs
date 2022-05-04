@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Collections.Generic;
 
 namespace Cse210Starter
 {
@@ -9,9 +9,7 @@ namespace Cse210Starter
         {
             Console.WriteLine("Tic Tac Toe Game");
 
-            // Write your code here
-
-            char[] squares = {'1', '2', '3', '4', '5', '6', '7', '8', '9'};
+            char[] squares = {'1','2','3', '4', '5', '6', '7', '8', '9'};
             
             for (int i = 0; i < 10; i++){
 
