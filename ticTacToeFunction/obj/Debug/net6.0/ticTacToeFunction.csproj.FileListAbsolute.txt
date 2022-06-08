@@ -1,0 +1,15 @@
+C:\Users\mckay\OneDrive\Documents\vs_code\ticTacToeGame\ticTacToeFunction\bin\Debug\net6.0\ticTacToeFunction.exe
+C:\Users\mckay\OneDrive\Documents\vs_code\ticTacToeGame\ticTacToeFunction\bin\Debug\net6.0\ticTacToeFunction.deps.json
+C:\Users\mckay\OneDrive\Documents\vs_code\ticTacToeGame\ticTacToeFunction\bin\Debug\net6.0\ticTacToeFunction.runtimeconfig.json
+C:\Users\mckay\OneDrive\Documents\vs_code\ticTacToeGame\ticTacToeFunction\bin\Debug\net6.0\ticTacToeFunction.dll
+C:\Users\mckay\OneDrive\Documents\vs_code\ticTacToeGame\ticTacToeFunction\bin\Debug\net6.0\ticTacToeFunction.pdb
+C:\Users\mckay\OneDrive\Documents\vs_code\ticTacToeGame\ticTacToeFunction\obj\Debug\net6.0\ticTacToeFunction.csproj.AssemblyReference.cache
+C:\Users\mckay\OneDrive\Documents\vs_code\ticTacToeGame\ticTacToeFunction\obj\Debug\net6.0\ticTacToeFunction.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mckay\OneDrive\Documents\vs_code\ticTacToeGame\ticTacToeFunction\obj\Debug\net6.0\ticTacToeFunction.AssemblyInfoInputs.cache
+C:\Users\mckay\OneDrive\Documents\vs_code\ticTacToeGame\ticTacToeFunction\obj\Debug\net6.0\ticTacToeFunction.AssemblyInfo.cs
+C:\Users\mckay\OneDrive\Documents\vs_code\ticTacToeGame\ticTacToeFunction\obj\Debug\net6.0\ticTacToeFunction.csproj.CoreCompileInputs.cache
+C:\Users\mckay\OneDrive\Documents\vs_code\ticTacToeGame\ticTacToeFunction\obj\Debug\net6.0\ticTacToeFunction.dll
+C:\Users\mckay\OneDrive\Documents\vs_code\ticTacToeGame\ticTacToeFunction\obj\Debug\net6.0\refint\ticTacToeFunction.dll
+C:\Users\mckay\OneDrive\Documents\vs_code\ticTacToeGame\ticTacToeFunction\obj\Debug\net6.0\ticTacToeFunction.pdb
+C:\Users\mckay\OneDrive\Documents\vs_code\ticTacToeGame\ticTacToeFunction\obj\Debug\net6.0\ticTacToeFunction.genruntimeconfig.cache
+C:\Users\mckay\OneDrive\Documents\vs_code\ticTacToeGame\ticTacToeFunction\obj\Debug\net6.0\ref\ticTacToeFunction.dll

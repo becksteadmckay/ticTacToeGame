@@ -9,41 +9,78 @@ namespace Cse210Starter
         {
             Console.WriteLine("Tic Tac Toe Game");
 
-            char[] squares = {'1','2','3', '4', '5', '6', '7', '8', '9'};
+            string currentPlayer = "x";
+
+            List<string> squares = GetNewBoard();
             
             for (int i = 0; i < 10; i++){
 
-                Console.WriteLine($"-----\n{squares[0]}|{squares[1]}|{squares[2]}");
+                displayBoard(squares);
+
+                if (checkWinner(squares) == true){
+                    i++;
+                }
+
+                getInput(currentPlayer, squares);
+
+                currentPlayer = nextPlayer(currentPlayer);
+
+                if (checkWinner(squares) == true){
+                    i = 9;
+                }
+
+            }
+        }
+        static List<string> GetNewBoard()
+        {
+            List<string> board = new List<string>();
+
+            for (int i = 1; i <= 9; i++)
+            {
+                board.Add(i.ToString());
+            }
+            return board;
+        }
+        static void displayBoard(List<string> squares)
+        {
+            Console.WriteLine($"-----\n{squares[0]}|{squares[1]}|{squares[2]}");
                 Console.WriteLine($"-+-+-\n{squares[3]}|{squares[4]}|{squares[5]}");
                 Console.WriteLine($"-+-+-\n{squares[6]}|{squares[7]}|{squares[8]}\n-----");
-                if (squares[0] == squares[1] && squares[0] == squares[2]
+
+        }
+        static bool checkWinner(List<string> squares)
+        {
+
+            bool isWinner = false;
+
+            if (squares[0] == squares[1] && squares[0] == squares[2]
                 || squares[3] == squares[4] && squares[3] == squares[5]
                 || squares[6] == squares[7] && squares[6] == squares[8]
                 || squares[0] == squares[3] && squares[0] == squares[6]
                 || squares[1] == squares[4] && squares[1] == squares[7]
                 || squares[2] == squares[5] && squares[2] == squares[8]
                 || squares[0] == squares[4] && squares[0] == squares[8]
-                || squares[6] == squares[4] && squares[6] == squares[2]){
-                    i = 10;
-                }
-                else {
-                    if (i % 2 == 0){
-                        Console.WriteLine("Player 1");
-                        string player1Input = Console.ReadLine();
-                        int player1 = int.Parse(player1Input);
-                        squares[player1 - 1] = 'x';}
-                    
-                    else if (i == 9){
-                    Console.WriteLine("Tie");}
-
-                    else if(i % 2 == 1){
-                        Console.WriteLine("Player 2");
-                        string player2Input = Console.ReadLine();
-                        int player2 = int.Parse(player2Input);
-                        squares[player2 - 1] = 'o';}
-                
-                }
+                || squares[6] == squares[4] && squares[6] == squares[2])
+            {    
+                isWinner = true; 
             }
+            return isWinner;
         }
-    }   
-} 
+        static void getInput(string player, List<string> squares)
+        {
+            Console.WriteLine($"Player {player}");
+                string playerInput = Console.ReadLine() ?? "";
+                int playerInt = int.Parse(playerInput);
+                squares[playerInt - 1] = $"{player}";
+        }
+        static string nextPlayer(string currentPlayer)
+        { string nextPlayer = "x";
+            if (currentPlayer == "x")
+            {
+                nextPlayer = "o";
+            }
+        return nextPlayer;
+
+        }
+    }
+}  
