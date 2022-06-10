@@ -12,8 +12,8 @@ namespace Unit03.Game
     /// </summary>
     public class Director
     {
-        private Hider hider = new Hider();
         private bool isPlaying = true;
+        private Word word = new Word();
         private Seeker seeker = new Seeker();
 
         private Chute chute = new Chute();
@@ -47,7 +47,7 @@ namespace Unit03.Game
             
             char guess = terminalService.ReadChar("\nEnter any letter. ");
             seeker.MoveLocation(guess);
-            hider.checkGuess(guess);
+            word.checkGuess(guess);
         }
 
         /// <summary>
@@ -55,9 +55,9 @@ namespace Unit03.Game
         /// </summary>
         private void DoUpdates()
         {
-            hider.WatchSeeker(seeker);
-            chute.WatchHider_true(hider);
-            hider.checkWord(hider);
+            word.WatchSeeker(seeker);
+            chute.WatchWord_true(word);
+            word.checkWord(word);
             
 
         }
@@ -67,13 +67,16 @@ namespace Unit03.Game
         /// </summary>
         private void DoOutputs()
         {
+            word.returnGuessList();
             terminalService.WriteText(chute.GetChute());
-            string hint = hider.GetHint();
+            string hint = word.GetHint();
             terminalService.WriteText(hint);
-            if (chute.returnCount() > 6)
+            if (chute.returnCount() > 6 || word._word == word.GetHint())
             {
                 isPlaying = false;
+                terminalService.WriteText(word.getWord());
             }
+            terminalService.WriteText(word.checkWord(word));
             
         }
     }

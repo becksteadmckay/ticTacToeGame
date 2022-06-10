@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-
+using Unit03.Game;
 
 
 namespace Unit03.Game
@@ -13,6 +13,7 @@ namespace Unit03.Game
     /// </summary>
     public class Chute
     {
+        private Word word = new Word();
         private TerminalService terminalService = new TerminalService();
         private List<string> _lines = new List<string>();
         private int _count = 0;
@@ -36,22 +37,6 @@ namespace Unit03.Game
             _lines.Add(@"  \ /  ");
             _lines.Add(@"   |   ");
         }
-        // public void cutString()
-        // {
-        //     for (int i = 0; i < _count; i ++)
-        //     {
-        //         _lines.RemoveAt(0);
-        //     }
-        // }
-
-        // /// <summary>
-        // /// Gets a hint for the seeker.
-        // /// </summary>
-        // /// <returns>A new hint.</returns>
-        // public string GetChute()
-        // {
-        //     return string.Join("\n", _lines);
-        // }
         public string GetChute()
         {
             List<string> newlist = new List<string>();
@@ -75,9 +60,9 @@ namespace Unit03.Game
         /// Watches the seeker by keeping track of how far away it is.
         /// </summary>
         /// <param name="seeker">The seeker to watch.</param>
-        public void WatchHider_true(Hider hider)
+        public void WatchWord_true(Word word)
         {
-            if (hider._true == false)
+            if (word._true == false)
             {
                 _count += 1;
             }
